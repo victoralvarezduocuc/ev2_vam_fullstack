@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Gourmet & Co</title>
+    <link rel="icon" type="image/png" href="img/LOGO.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="style.css">
+    <script 
+        src="https://kit.fontawesome.com/623c1036bc.js" 
+        crossorigin="anonymous">
+    </script>
+
+</head>
+
+
+<body class="bg-wood">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+
+        <img 
+            src="img/LOGO.png" 
+            width="50px" 
+            height="50px"
+        >
+
+        <a 
+            href="index.html" 
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
+        >
+
+            <span class="fs-4">
+                Gourmet & Co.
+            </span>
+
+        </a>
+
+
+        <ul class="nav nav-pills">
+
+            <li class="nav-item">
+
+                <a href="index.html" class="nav-link">
+                    Inicio
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a href="Cafes-Te.html" class="nav-link">
+                    Cafés & Té
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a href="Chocolates-Dulces.html" class="nav-link">
+                    Chocolates & Dulces
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a href="Quesos-Charcuteria.html" class="nav-link">
+                    Quesos & Charcuteria
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a href="Vinos-Licores.html" class="nav-link">
+                    Vinos & Licores
+                </a>
+
+            </li>
+
+
+        <li class="nav-item">
+            <p>
+                <a href="Carrito.html" class="nav-link">
+                    Carrito
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2">
+                    </path>
+                </svg>
+                </a>
+            </p> 
+        </li>
+
+        </ul>
+
+    </header>
+
+    <main class="container py-5">
+
+        <h1 class="text-center mb-5">
+            Carrito de compras
+        </h1>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-8">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h4 class="mb-4">
+                            Tus productos
+                        </h4>
+
+                        <div id="carrito">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-4">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h4 class="mb-4">
+                            Resumen de compra
+                        </h4>
+
+
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="subtotal">
+                                $0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <span>
+                                Envío
+                            </span>
+
+                            <span>
+                                Gratis
+                            </span>
+
+                        </div>
+
+
+                        <hr>
+
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <strong>
+                                Total
+                            </strong>
+
+                            <strong 
+                                id="total" 
+                                class="fs-4"
+                            >
+                                $0
+                            </strong>
+
+                        </div>
+
+
+                        <button 
+                            type="button"
+                            class="btn btn-outline-success w-100"
+                            onclick="comprar()"
+                        >
+
+                            Comprar
+
+                        </button>
+
+
+                        <button 
+                            type="button"
+                            class="btn btn-outline-danger w-100 mt-2"
+                            onclick="vaciarCarrito()"
+                        >
+
+                            Vaciar carrito
+
+                        </button>
+
+
+                        <a 
+                            href="index.html" 
+                            class="btn btn-outline-secondary w-100 mt-2"
+                        >
+
+                            Seguir comprando
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

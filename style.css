@@ -1,0 +1,66 @@
+header {
+    background-color: #800020;
+    color: white;
+    padding: 20px;
+    font-style: italic;
+
+}
+
+header a {
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    
+}
+
+.nav-link{
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+}
+
+.bg-coffee{
+    background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3Jhbm9zJTIwZGUlMjBjYWZlfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-dulces{
+    background-image: url('https://plus.unsplash.com/premium_photo-1667031518595-9cb4b0d504ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNob2NvbGF0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-wine{
+    background-image: url('https://images.unsplash.com/photo-1562601579-599dec564e06?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2luZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-cheese{
+    background-image: url('https://images.unsplash.com/photo-1631379578550-7038263db699?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZXNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.bg-wood{
+    background-image: url('https://images.unsplash.com/photo-1611600700192-d87eaeed4f81?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29vZCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
