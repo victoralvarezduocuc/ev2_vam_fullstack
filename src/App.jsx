@@ -39,6 +39,15 @@ export default function App() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Carga el catálogo desde el backend (MongoDB). Si el backend está apagado,
+  // el sitio sigue funcionando con la lista local de src/data/products.js.
+  useEffect(() => {
+    fetch('/api/productos')
+      .then(response => (response.ok ? response.json() : Promise.reject(new Error('sin catálogo'))))
+      .then(list => { if (Array.isArray(list) && list.length) setProducts(list); })
+      .catch(() => {});
+  }, []);
+
   useEffect(() => {
     const onPopState = () => setPath(window.location.pathname);
     window.addEventListener('popstate', onPopState);

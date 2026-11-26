@@ -1,0 +1,21 @@
+# MongoDB local para desarrollo. Inicia con:  docker compose up -d
+# Credenciales de desarrollo: NO usar estas claves en un servidor real.
+services:
+  mongo:
+    image: mongo:7
+    container_name: gourmet-mongo
+    restart: unless-stopped
+    ports:
+      # Solo accesible desde tu propio computador (no desde la red).
+      - "127.0.0.1:27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root123
+    volumes:
+      # Los datos sobreviven aunque apagues o recrees el contenedor.
+      - gourmet-mongo-data:/data/db
+      # Se ejecuta una sola vez, cuando el volumen está vacío: crea la base y el usuario de la API.
+      - ./docker/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+volumes:
+  gourmet-mongo-data:

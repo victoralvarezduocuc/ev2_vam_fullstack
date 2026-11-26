@@ -1,0 +1,29 @@
+Terminal 1: backend. Reemplaza TU_CLAVE por la clave de tu usuario de Atlas y usa comillas simples:
+
+powershell
+$env:MONGODB_URI='mongodb+srv://victoalvarezm_db_user:TU_CLAVE@gourmet.vga16zh.mongodb.net/gourmet?retryWrites=true&w=majority'
+cd backend
+.\mvnw.cmd spring-boot:run
+
+Espera a ver Started GourmetApplication. La terminal queda ocupada mientras el backend corre.
+
+Terminal 2: sitio web. Abre otra terminal con el botón + y, desde la raíz del proyecto (la carpeta con package.json):
+
+powershell
+npm install
+npm run dev
+
+npm install solo es necesario la primera vez, o si cambias dependencias. Luego basta con npm run dev. Abre http://localhost:5173.
+
+Comprobar que funciona
+
+Abre estas direcciones en el navegador:
+
+Dirección	Qué muestra
+http://localhost:5173	El sitio web
+http://localhost:8081/api/productos	Los 6 productos desde MongoDB
+http://localhost:8081/api/ventas	Las ventas guardadas
+http://localhost:8081/swagger-ui.html	Documentación interactiva de la API
+Apagar todo
+
+En cada terminal, haz clic dentro y presiona Ctrl + C. Si pregunta "¿Terminar el trabajo por lotes?", escribe S y Enter.
